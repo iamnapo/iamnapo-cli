@@ -1,0 +1,12 @@
+sudo: false
+os:
+  - osx
+language: node_js
+node_js:
+  - node
+cache:
+  yarn: true
+  directories:
+    - node_modules
+notifications:
+  email: false
