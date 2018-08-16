@@ -55,7 +55,7 @@ module.exports = () => (
 		</span>
 		<br/>
 		<span>
-			<Color teal>I’m an Electrical &amp; Computer Engineer and Software Developer, currently working as<br/>a Full Stack Deveoper at the </Color>
+			<Color teal>I’m an Electrical &amp; Computer Engineer and Software Developer, currently working as<br/>a Software Engineer at the </Color>
 		</span>
 		<span>
 			<Link url="https://issel.ee.auth.gr/">
