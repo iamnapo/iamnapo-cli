@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "node src/cli.js",
-    "test": "xo && ava"
+    "test": "eslint . --fix && ava"
   },
   "repository": "github:iamnapo/iamnapo",
   "author": {
@@ -24,10 +24,14 @@
     "node": ">=8"
   },
   "devDependencies": {
-    "ava": "^1.0.1",
-    "eslint-config-xo-react": "^0.17.0",
-    "eslint-plugin-react": "^7.11.1",
-    "xo": "^0.23.0"
+    "ava": "^1.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-iamnapo": "^1.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3"
   },
   "dependencies": {
     "import-jsx": "^1.3.0",
@@ -37,7 +41,7 @@
     "meow": "^5.0.0",
     "opn": "^5.4.0",
     "term-img": "^4.0.0",
-    "terminal-image": "^0.1.1"
+    "terminal-image": "^0.1.2"
   },
   "keywords": [
     "cli-app",
@@ -45,15 +49,5 @@
     "iamnapo",
     "npx",
     "personal"
-  ],
-  "xo": {
-    "extends": [
-      "xo-react"
-    ],
-    "settings": {
-      "react": {
-        "pragma": "h"
-      }
-    }
-  }
+  ]
 }
