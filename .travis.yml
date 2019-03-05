@@ -4,9 +4,6 @@ os:
 language: node_js
 node_js:
   - node
-cache:
-  yarn: true
-  directories:
-    - node_modules
+cache: npm
 notifications:
   email: false
