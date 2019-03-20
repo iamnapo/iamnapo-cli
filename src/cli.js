@@ -14,6 +14,10 @@ meow(`
 `);
 
 const avatar = path.join(__dirname, 'avatar.png');
-termImg(avatar, { fallback: async () => console.log(await terminalImage.file(avatar)) });
 
-render(ui());
+if (process.env.TERM_PROGRAM !== 'iTerm.app') {
+  terminalImage.file(avatar).then((img) => { console.log(img); render(ui()); });
+} else {
+  termImg(avatar, { fallback: async () => console.log(await terminalImage.file(avatar)) });
+  render(ui());
+}
