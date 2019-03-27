@@ -2,10 +2,8 @@ const React = require('react');
 const { Text, Box } = require('ink');
 const SelectInput = require('ink-select-input').default;
 const terminalLink = require('terminal-link');
-const opn = require('opn');
+const open = require('open');
 const chalk = require('chalk');
-
-const open = url => opn(url, { wait: false });
 
 const handleSelect = (item) => {
   if (item.value) open(item.value);
