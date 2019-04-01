@@ -2,7 +2,6 @@
 const path = require('path');
 const meow = require('meow');
 const termImg = require('term-img');
-const terminalImage = require('terminal-image');
 const importJsx = require('import-jsx');
 const { render } = require('ink');
 
@@ -13,11 +12,5 @@ meow(`
     $ iamnapo
 `);
 
-const avatar = path.join(__dirname, 'avatar.png');
-
-if (process.env.TERM_PROGRAM !== 'iTerm.app') {
-  terminalImage.file(avatar).then((img) => { console.log(img); render(ui()); });
-} else {
-  termImg(avatar, { fallback: async () => console.log(await terminalImage.file(avatar)) });
-  render(ui());
-}
+termImg(path.join(__dirname, 'avatar.png'), { fallback: () => {} });
+render(ui());

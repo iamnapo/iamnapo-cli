@@ -30,19 +30,18 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "import-jsx": "^2.0.0",
-    "ink": "^2.0.6",
+    "ink": "^2.1.0",
     "ink-select-input": "^3.1.0",
     "meow": "^5.0.0",
     "open": "^6.0.0",
-    "react": "^16.8.5",
+    "react": "^16.8.6",
     "term-img": "^4.0.0",
-    "terminal-image": "^0.1.2",
     "terminal-link": "^1.2.0"
   },
   "devDependencies": {
-    "ava": "^1.4.0",
+    "ava": "^1.4.1",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.15.3",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-iamnapo": "^1.0.2",
     "eslint-plugin-import": "^2.16.0",
