@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const React = require('react');
 const path = require('path');
 const meow = require('meow');
 const termImg = require('term-img');
@@ -13,4 +14,4 @@ meow(`
 `);
 
 termImg(path.join(__dirname, 'avatar.png'), { fallback: () => {} });
-render(ui());
+render(React.createElement(ui));

@@ -23,7 +23,7 @@ const items = [
 const ui = () => (
   <Box flexDirection="column">
     <Text>{chalk.hex('#008B8B').bold('Hello! I’m Napoleon-Christos Oikonomou. 😎')}</Text>
-    <Box flexDirection="column">
+    <Box marginBottom={1}>
       <Text>
         {`I’m an Electrical & Computer Engineer and Software Developer, currently working\nas a Software Engineer at the ${
           terminalLink(chalk.cyan('Intelligent Systems & Software Engineering Labgroup'), 'https://issel.ee.auth.gr/')}.`}
