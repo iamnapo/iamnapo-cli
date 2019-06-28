@@ -1,6 +1,6 @@
 const React = require('react');
 const { Text, Box } = require('ink');
-const SelectInput = require('ink-select-input').default;
+const { default: SelectInput } = require('ink-select-input');
 const terminalLink = require('terminal-link');
 const open = require('open');
 const chalk = require('chalk');
@@ -17,7 +17,7 @@ const items = [
   { label: 'Contact', value: 'mailto:napoleonoikon@gmail.com' },
   { label: 'Facebook', value: 'https://facebook.com/napohotline' },
   { label: 'Twitter', value: 'https://twitter.com/_iamnapo' },
-  { label: 'Quit', value: 'quit', action() { process.exit(); } },
+  { label: 'Quit', key: 'quit', action() { process.exit(); } },
 ];
 
 const ui = () => (
