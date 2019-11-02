@@ -26,7 +26,8 @@ const ui = () => (
     <Box marginBottom={1}>
       <Text>
         {`I’m an Electrical & Computer Engineer and Software Developer, currently working\nas a Software Engineer at the ${
-          terminalLink(chalk.cyan("Intelligent Systems & Software Engineering Labgroup"), "https://issel.ee.auth.gr/")}.`}
+          terminalLink(chalk.cyan("Intelligent Systems & Software Engineering Labgroup"), "https://issel.ee.auth.gr/")
+        } and at ${terminalLink(chalk.cyan("Cyclopt"), "https://cyclopt.com/")}.`}
       </Text>
     </Box>
     <SelectInput items={items} onSelect={handleSelect} />
