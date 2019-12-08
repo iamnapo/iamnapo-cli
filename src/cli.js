@@ -13,5 +13,5 @@ meow(`
     $ iamnapo
 `);
 
-termImg(path.join(__dirname, "avatar.png"), { fallback: () => {} });
+termImg(path.join(__dirname, "avatar.png"), { fallback: () => { } });
 render(React.createElement(ui));
