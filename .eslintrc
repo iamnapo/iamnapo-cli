@@ -1,3 +1,6 @@
 {
-	"extends": "iamnapo"
+	"extends": "iamnapo",
+	"rules": {
+		"unicorn/no-process-exit": "off"
+	}
 }

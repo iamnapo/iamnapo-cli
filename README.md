@@ -2,7 +2,7 @@
 
 > The [Napoleon Oikonomou](https://iamnapo.me) CLI
 
-[![travis](https://img.shields.io/travis/com/iamnapo/iamnapo.svg?style=for-the-badge&logo=travis&label=)](https://travis-ci.com/iamnapo/iamnapo) [![npm](https://img.shields.io/npm/v/iamnapo.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/iamnapo) [![license](https://img.shields.io/github/license/iamnapo/iamnapo.svg?style=for-the-badge)](./LICENSE)
+[![build](https://img.shields.io/github/workflow/status/iamnapo/iamnapo/Install%20%26%20test?style=for-the-badge&logo=github&label=)](https://github.com/iamnapo/iamnapo/actions) [![npm](https://img.shields.io/npm/v/iamnapo.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/iamnapo) [![license](https://img.shields.io/github/license/iamnapo/iamnapo.svg?style=for-the-badge)](./LICENSE)
 
 <p align="center" flex-direction="row"><img src="screenshot.png" width="752"></p>
 
