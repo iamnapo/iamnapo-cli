@@ -14,8 +14,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - run: npm i
-      - run: npm test
+      - run: yarn
+      - run: yarn test
 
   publish:
     needs: test
@@ -29,6 +29,6 @@ jobs:
           node-version: "12.x"
           registry-url: https://npm.pkg.github.com/
           scope: "@iamnapo"
-      - run: npm publish
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
