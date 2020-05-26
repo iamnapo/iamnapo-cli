@@ -35,20 +35,20 @@
 		"import-jsx": "^4.0.0",
 		"ink": "^2.7.1",
 		"ink-select-input": "^3.1.2",
-		"meow": "^6.1.0",
-		"open": "^7.0.3",
+		"meow": "^7.0.1",
+		"open": "^7.0.4",
 		"react": "^16.13.1",
 		"terminal-link": "^2.1.1"
 	},
 	"devDependencies": {
-		"eslint": "^6.8.0",
+		"eslint": "^7.1.0",
 		"eslint-config-airbnb": "^18.1.0",
-		"eslint-config-iamnapo": "^3.1.0",
+		"eslint-config-iamnapo": "^5.0.0",
 		"eslint-plugin-import": "^2.20.2",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
-		"eslint-plugin-react": "^7.19.0",
-		"eslint-plugin-react-hooks": "^3.0.0",
-		"eslint-plugin-unicorn": "^19.0.1"
+		"eslint-plugin-react": "^7.20.0",
+		"eslint-plugin-react-hooks": "^4.0.3",
+		"eslint-plugin-unicorn": "^20.0.0"
 	},
 	"engines": {
 		"node": ">=10"

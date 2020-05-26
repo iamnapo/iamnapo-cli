@@ -6,8 +6,7 @@ on:
       - "v*"
 
 jobs:
-  test:
-    name: Test
+  ci:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -23,15 +22,14 @@ jobs:
           CI: true
 
   publish:
-    needs: test
-    name: Publish
+    needs: ci
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: npx replace-in-file \"iamnapo\" \"@iamnapo\/iamnapo\" package.json
       - uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
+          node-version: 14
           registry-url: https://npm.pkg.github.com/
           scope: "@iamnapo"
       - run: yarn publish

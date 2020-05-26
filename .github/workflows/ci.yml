@@ -1,4 +1,4 @@
-name: Install & test
+name: ci
 
 on:
   push:
@@ -10,8 +10,7 @@ on:
       - "docs/**"
       - "media/**"
 jobs:
-  test:
-    name: Test
+  ci:
     runs-on: ubuntu-latest
     strategy:
       matrix:

@@ -13,13 +13,3 @@ Install Node.js, then:
 ```console
 $ npx iamnapo
 ```
-
-Or, if you’re cool and use [GitHub Package Registry](https://github.com/features/package-registry):
-
-```console
-$ npx @iamnapo/iamnapo
-```
-
-## License
-
-MIT © [Napoleon-Christos Oikonomou](https://iamnapo.me)
