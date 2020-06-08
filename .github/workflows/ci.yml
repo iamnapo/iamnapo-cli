@@ -1,14 +1,7 @@
 name: ci
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    paths-ignore:
-      - "*.md"
-      - "docs/**"
-      - "media/**"
+on: push
+
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -22,5 +15,3 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn
       - run: yarn test
-        env:
-          CI: true

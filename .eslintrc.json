@@ -1,5 +1,5 @@
 {
-	"extends": "iamnapo",
+	"extends": "iamnapo/with-react",
 	"rules": {
 		"unicorn/no-process-exit": "off"
 	}
