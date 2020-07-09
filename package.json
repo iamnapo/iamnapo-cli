@@ -9,11 +9,11 @@
 		"npx",
 		"personal"
 	],
-	"homepage": "https://github.com/iamnapo/iamnapo#readme",
+	"homepage": "https://github.com/iamnapo/iamnapo-cli#readme",
 	"bugs": {
-		"url": "https://github.com/iamnapo/iamnapo/issues"
+		"url": "https://github.com/iamnapo/iamnapo-cli/issues"
 	},
-	"repository": "github:iamnapo/iamnapo",
+	"repository": "github:iamnapo/iamnapo-cli",
 	"license": "MIT",
 	"author": {
 		"name": "Napoleon Oikonomou",
@@ -31,7 +31,7 @@
 		"test": "eslint . --cache"
 	},
 	"dependencies": {
-		"chalk": "^4.0.0",
+		"chalk": "^4.1.0",
 		"import-jsx": "^4.0.0",
 		"ink": "^2.7.1",
 		"ink-select-input": "^3.1.2",
@@ -41,12 +41,12 @@
 		"terminal-link": "^2.1.1"
 	},
 	"devDependencies": {
-		"eslint": "^7.2.0",
-		"eslint-config-iamnapo": "^6.0.0",
-		"eslint-plugin-import": "^2.21.1",
-		"eslint-plugin-jsx-a11y": "^6.2.3",
-		"eslint-plugin-react": "^7.20.0",
-		"eslint-plugin-react-hooks": "^4.0.4",
+		"eslint": "^7.4.0",
+		"eslint-config-iamnapo": "^6.0.3",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-jsx-a11y": "^6.3.1",
+		"eslint-plugin-react": "^7.20.3",
+		"eslint-plugin-react-hooks": "^4.0.6",
 		"eslint-plugin-unicorn": "^20.1.0"
 	},
 	"engines": {
