@@ -33,21 +33,21 @@
 	"dependencies": {
 		"chalk": "^4.1.0",
 		"import-jsx": "^4.0.0",
-		"ink": "^2.7.1",
-		"ink-select-input": "^3.1.2",
-		"meow": "^7.0.1",
-		"open": "^7.0.4",
+		"ink": "^3.0.3",
+		"ink-select-input": "^4.0.0",
+		"meow": "^7.1.0",
+		"open": "^7.1.0",
 		"react": "^16.13.1",
 		"terminal-link": "^2.1.1"
 	},
 	"devDependencies": {
-		"eslint": "^7.4.0",
-		"eslint-config-iamnapo": "^6.0.3",
+		"eslint": "^7.6.0",
+		"eslint-config-iamnapo": "^7.0.0",
 		"eslint-plugin-import": "^2.22.0",
 		"eslint-plugin-jsx-a11y": "^6.3.1",
-		"eslint-plugin-react": "^7.20.3",
-		"eslint-plugin-react-hooks": "^4.0.6",
-		"eslint-plugin-unicorn": "^20.1.0"
+		"eslint-plugin-react": "^7.20.6",
+		"eslint-plugin-react-hooks": "^4.0.8",
+		"eslint-plugin-unicorn": "^21.0.0"
 	},
 	"engines": {
 		"node": ">=10"
