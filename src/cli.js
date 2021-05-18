@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const React = require("react");
+const { createElement } = require("react");
 const meow = require("meow");
 const importJsx = require("import-jsx");
 const { render } = require("ink");
@@ -11,4 +11,9 @@ meow(`
     $ iamnapo
 `);
 
-render(React.createElement(ui));
+(async () => {
+	const app = render(createElement(ui));
+
+	await app.waitUntilExit();
+})();
+

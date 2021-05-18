@@ -5,13 +5,17 @@ on: push
 jobs:
   ci:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12, 14]
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v2
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: yarn
-      - run: yarn test
+          node-version: 16
+
+      - name: 📥 Download deps
+        run: npm i --legacy-peer-deps
+
+      - name: 🧪 Run test script
+        run: npm test
