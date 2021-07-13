@@ -28,7 +28,7 @@ const App = () => {
 				<Text>
 					{`I’m an Electrical & Computer Engineer and Software Developer, currently working\nas a Software Engineer at the ${
 						terminalLink(chalk.cyan("Intelligent Systems & Software Engineering Labgroup"), "https://issel.ee.auth.gr/")
-					}\nand at ${terminalLink(chalk.blue("Cyclopt"), "https://cyclopt.com/")}, as their Lead Software Engineer.`}
+					}\nand at ${terminalLink(chalk.blue("Cyclopt"), "https://cyclopt.com/")}, as a Senior Software Engineer.`}
 				</Text>
 			</Box>
 			<SelectInput items={items} onSelect={handleSelect} />
