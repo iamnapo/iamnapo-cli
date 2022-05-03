@@ -15,7 +15,7 @@ jobs:
           node-version: 18
 
       - name: 📥 Download deps
-        run: npm i
+        run: npm i --force
 
       - name: 🧪 Run test script
         run: npm test

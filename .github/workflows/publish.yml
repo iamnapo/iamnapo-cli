@@ -19,7 +19,7 @@ jobs:
           scope: "@iamnapo"
 
       - name: 📥 Download deps
-        run: npm i
+        run: npm i --force
 
       - name: 🏗 Run replace-in-file
         run: npx replace-in-file \"iamnapo\" \"@iamnapo\/iamnapo\" package.json
