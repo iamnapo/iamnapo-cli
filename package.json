@@ -31,7 +31,7 @@
 		"build": "babel src --out-dir dist",
 		"prepare": "npm run build",
 		"start": "node dist/cli.js",
-		"test": "eslint . --cache"
+		"test": "eslint . --ext .jsx,.js --cache"
 	},
 	"babel": {
 		"presets": [
@@ -44,7 +44,8 @@
 		]
 	},
 	"eslintConfig": {
-		"extends": "iamnapo/react"
+		"extends": "iamnapo/react",
+		"ignorePatterns": "dist"
 	},
 	"dependencies": {
 		"chalk": "^5.0.1",

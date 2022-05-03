@@ -2,7 +2,7 @@
 import meow from "meow";
 import { render } from "ink";
 
-import UI from "./ui.js";
+import UI from "./ui.js"; // eslint-disable-line import/extensions
 
 meow(`
   Usage
