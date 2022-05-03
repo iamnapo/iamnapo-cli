@@ -20,42 +20,49 @@
 		"email": "Napoleonoikon@gmail.com",
 		"url": "https://iamnapo.me"
 	},
+	"type": "module",
 	"bin": {
-		"iamnapo": "src/cli.js"
+		"iamnapo": "dist/cli.js"
 	},
 	"files": [
-		"src"
+		"dist"
 	],
 	"scripts": {
-		"start": "node src/cli.js",
+		"build": "babel src --out-dir dist",
+		"prepare": "npm run build",
+		"start": "node dist/cli.js",
 		"test": "eslint . --cache"
 	},
+	"babel": {
+		"presets": [
+			[
+				"@babel/preset-react",
+				{
+					"runtime": "automatic"
+				}
+			]
+		]
+	},
 	"eslintConfig": {
-		"extends": "iamnapo/with-react",
-		"rules": {
-			"unicorn/prefer-module": "off"
-		}
+		"extends": "iamnapo/react"
 	},
 	"dependencies": {
-		"chalk": "^4.1.1",
-		"import-jsx": "^4.0.0",
-		"ink": "^3.0.8",
-		"ink-select-input": "^4.2.0",
-		"meow": "^9.0.0",
-		"open": "^8.2.1",
-		"react": "^17.0.2",
-		"terminal-link": "^2.1.1"
+		"chalk": "^5.0.1",
+		"ink": "^3.2.0",
+		"ink-select-input": "^4.2.1",
+		"meow": "^10.1.2",
+		"open": "^8.4.0",
+		"react": "^18.1.0",
+		"terminal-link": "^3.0.0"
 	},
 	"devDependencies": {
-		"eslint": "^7.30.0",
-		"eslint-config-iamnapo": "^16.1.0",
-		"eslint-plugin-import": "^2.23.4",
-		"eslint-plugin-jsx-a11y": "^6.4.1",
-		"eslint-plugin-react": "^7.24.0",
-		"eslint-plugin-react-hooks": "^4.2.0",
-		"eslint-plugin-unicorn": "^34.0.1"
+		"@babel/cli": "^7.17.10",
+		"@babel/core": "^7.17.10",
+		"@babel/preset-react": "^7.16.7",
+		"eslint": "^8.14.0",
+		"eslint-config-iamnapo": "^24.1.0"
 	},
 	"engines": {
-		"node": ">=12"
+		"node": ">=14"
 	}
 }
