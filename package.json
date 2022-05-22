@@ -22,26 +22,16 @@
 	},
 	"type": "module",
 	"bin": {
-		"iamnapo": "dist/cli.js"
+		"iamnapo": "./dist/cli.js"
 	},
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build": "babel src --out-dir dist",
+		"build": "esbuild source/cli.jsx --bundle --external:./node_modules/* --platform=node --format=esm --outfile=dist/cli.js",
 		"prepare": "npm run build",
 		"start": "node dist/cli.js",
 		"test": "eslint . --ext .jsx,.js --cache"
-	},
-	"babel": {
-		"presets": [
-			[
-				"@babel/preset-react",
-				{
-					"runtime": "automatic"
-				}
-			]
-		]
 	},
 	"eslintConfig": {
 		"extends": "iamnapo/react",
@@ -57,13 +47,11 @@
 		"terminal-link": "^3.0.0"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.17.10",
-		"@babel/core": "^7.17.10",
-		"@babel/preset-react": "^7.16.7",
+		"esbuild": "^0.14.39",
 		"eslint": "^8.14.0",
 		"eslint-config-iamnapo": "^24.1.0"
 	},
 	"engines": {
-		"node": ">=14"
+		"node": ">=16"
 	}
 }

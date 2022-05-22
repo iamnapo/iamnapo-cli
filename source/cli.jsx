@@ -1,20 +1,21 @@
-import { createRequire } from "node:module";
+#!/usr/bin/env node
 
-import { Text, Box, useApp } from "ink";
+import React from "react";
+import meow from "meow";
+import { render, Text, Box, useApp } from "ink";
 import terminalLink from "terminal-link";
-import open from "open";
 import chalk from "chalk";
+import SelectInputModule from "ink-select-input";
+import open from "open";
 
-const require = createRequire(import.meta.url);
+meow(`
+  Usage
+    $ iamnapo
+`, { importMeta: import.meta });
 
-const SelectInput = require("ink-select-input").default;
+const SelectInput = SelectInputModule.default;
 
-const handleSelect = (item) => {
-	if (item.value) open(item.value);
-	if (item.action) item.action();
-};
-
-const UI = () => {
+const App = () => {
 	const { exit } = useApp();
 	const items = [
 		{ label: "Website", value: "https://iamnapo.me" },
@@ -24,6 +25,10 @@ const UI = () => {
 		{ label: "Twitter", value: "https://iamnapo.me/tw" },
 		{ label: "Quit", key: "quit", action: exit },
 	];
+	const handleSelect = React.useCallback((item) => {
+		if (item.value) open(item.value);
+		if (item.action) item.action();
+	}, []);
 
 	return (
 		<Box flexDirection="column">
@@ -38,4 +43,4 @@ const UI = () => {
 	);
 };
 
-export default UI;
+render(<App />);
