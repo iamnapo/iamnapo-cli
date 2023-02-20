@@ -15,11 +15,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          registry-url: "https://npm.pkg.github.com"
-          scope: "@iamnapo"
 
       - name: 📥 Download deps
         run: npm i
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@iamnapo"
 
       - name: 🏗 Run replace-in-file
         run: npx replace-in-file \"iamnapo\" \"@iamnapo\/iamnapo\" package.json
