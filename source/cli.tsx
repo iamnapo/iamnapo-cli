@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { useCallback } from "react";
 import meow from "meow";
 import { render, Text, Box, useApp } from "ink";
 import terminalLink from "terminal-link";
@@ -15,6 +14,11 @@ meow(`
 
 const SelectInput = SelectInputModule.default;
 
+const handleSelect = (item: { value?: string; action?: () => void }): void => {
+	if (item.value) void open(item.value);
+	if (item.action) item.action();
+};
+
 const App = () => {
 	const { exit } = useApp();
 	const items = [
@@ -25,10 +29,6 @@ const App = () => {
 		{ label: "Twitter", value: "https://iamnapo.me/tw" },
 		{ label: "Quit", key: "quit", action: exit },
 	];
-	const handleSelect = useCallback((item: { value?: string; action?: () => void }): void => {
-		if (item.value) void open(item.value);
-		if (item.action) item.action();
-	}, []);
 
 	return (
 		<Box flexDirection="column">
