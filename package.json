@@ -28,30 +28,38 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "esbuild source/cli.jsx --bundle --external:./node_modules/* --platform=node --format=esm --outfile=dist/cli.js",
+		"build": "tsc -noEmit && esbuild source/cli.tsx --bundle --external:./node_modules/* --platform=node --format=esm --outfile=dist/cli.js",
 		"prepare": "npm run build",
 		"start": "node dist/cli.js",
-		"test": "eslint . --ext .jsx,.js --cache"
+		"test": "eslint . --ext .tsx --cache && tsc -noEmit"
 	},
 	"eslintConfig": {
-		"extends": "iamnapo/react",
+		"extends": "iamnapo/react-typescript",
 		"ignorePatterns": "dist"
 	},
 	"dependencies": {
-		"chalk": "^5.0.1",
+		"chalk": "^5.2.0",
 		"ink": "^3.2.0",
 		"ink-select-input": "^4.2.1",
-		"meow": "^10.1.2",
-		"open": "^8.4.0",
-		"react": "^18.1.0",
+		"meow": "^11.0.0",
+		"open": "^8.4.2",
+		"react": "^18.2.0",
 		"terminal-link": "^3.0.0"
 	},
 	"devDependencies": {
-		"esbuild": "^0.14.39",
-		"eslint": "^8.14.0",
-		"eslint-config-iamnapo": "^24.1.0"
+		"@iamnapo/tsconfig": "^2.0.0",
+		"@types/react": "^18.0.28",
+		"esbuild": "^0.17.9",
+		"eslint": "^8.34.0",
+		"eslint-config-iamnapo": "^28.2.0",
+		"typescript": "^4.9.5"
 	},
 	"engines": {
 		"node": ">=16"
+	},
+	"overrides": {
+		"ink-select-input": {
+			"react": "$react"
+		}
 	}
 }

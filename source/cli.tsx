@@ -25,8 +25,8 @@ const App = () => {
 		{ label: "Twitter", value: "https://iamnapo.me/tw" },
 		{ label: "Quit", key: "quit", action: exit },
 	];
-	const handleSelect = React.useCallback((item) => {
-		if (item.value) open(item.value);
+	const handleSelect = React.useCallback((item: { value?: string; action?: () => void }): void => {
+		if (item.value) void open(item.value);
 		if (item.action) item.action();
 	}, []);
 
@@ -35,10 +35,14 @@ const App = () => {
 			<Text bold color="#008B8B">{"Hello! I’m Napoleon-Christos Oikonomou. 😎"}</Text>
 			<Box marginBottom={1}>
 				<Text>
-					{`I’m an Electrical & Computer Engineer and Software Developer, currently working\nas the Lead Software Engineer at ${terminalLink(chalk.blue("Cyclopt"), "https://cyclopt.com/")}.`}
+					{`I’m an Electrical & Computer Engineer and Software Developer, currently working\nas a Lead Software Engineer at ${terminalLink(chalk.hex("#112e41")("TechNative"), "https://technative.gr/")}.`}
 				</Text>
 			</Box>
-			<SelectInput items={items} onSelect={handleSelect} />
+			<SelectInput
+				// @ts-expect-error lib type is not exposed, so it cannot be used
+				items={items}
+				onSelect={handleSelect}
+			/>
 		</Box>
 	);
 };
