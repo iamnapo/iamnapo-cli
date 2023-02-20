@@ -1,4 +1,7 @@
 {
 	"extends": "@iamnapo/tsconfig",
-	"include": ["**/*.tsx"]
+	"include": ["**/*.tsx"],
+	"compilerOptions": {
+		"jsx": "react-jsx"
+	}
 }

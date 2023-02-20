@@ -28,7 +28,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "tsc -noEmit && esbuild source/cli.tsx --bundle --packages=external --platform=node --format=esm --outfile=dist/cli.js",
+		"build": "tsc -noEmit && esbuild source/cli.tsx --bundle --packages=external --format=esm --outfile=dist/cli.js",
 		"prepare": "npm run build",
 		"start": "node dist/cli.js",
 		"test": "eslint . --ext .tsx --cache && tsc -noEmit"
