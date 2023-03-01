@@ -4,7 +4,7 @@ import meow from "meow";
 import { render, Text, Box, useApp } from "ink";
 import terminalLink from "terminal-link";
 import chalk from "chalk";
-import SelectInputModule from "ink-select-input";
+import SelectInput from "ink-select-input";
 import open from "open";
 
 meow(`
@@ -12,11 +12,9 @@ meow(`
     $ iamnapo
 `, { importMeta: import.meta });
 
-const SelectInput = SelectInputModule.default;
-
-const handleSelect = (item: { value?: string; action?: () => void }): void => {
-	if (item.value) void open(item.value);
+const handleSelect = (item: { value: string; action?: () => void }): void => {
 	if (item.action) item.action();
+	if (item.value) void open(item.value);
 };
 
 const App = () => {
@@ -27,7 +25,7 @@ const App = () => {
 		{ label: "LinkedIn", value: "https://iamnapo.me/li" },
 		{ label: "Contact", value: "mailto:hi@iamnapo.me" },
 		{ label: "Twitter", value: "https://iamnapo.me/tw" },
-		{ label: "Quit", key: "quit", action: exit },
+		{ label: "Quit", value: "quit", action: exit },
 	];
 
 	return (
@@ -39,7 +37,6 @@ const App = () => {
 				</Text>
 			</Box>
 			<SelectInput
-				// @ts-expect-error lib type is not exposed, so it cannot be used
 				items={items}
 				onSelect={handleSelect}
 			/>
