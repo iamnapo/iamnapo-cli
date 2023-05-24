@@ -1,8 +1,6 @@
 {
 	"extends": "@iamnapo/tsconfig",
-	"include": ["**/*.tsx"],
 	"compilerOptions": {
-		"jsx": "react-jsx",
 		"outDir": "dist"
 	}
 }
