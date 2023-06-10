@@ -1,5 +1,4 @@
 import { Select, type Option } from "@inkjs/ui";
-import chalk from "chalk";
 import { Box, Text, useApp } from "ink";
 import open from "open";
 import terminalLink from "terminal-link";
@@ -16,13 +15,19 @@ const Index = () => {
 	];
 
 	return (
-		<Box flexDirection="column">
-			<Text bold color="#008B8B">
-				{"Hello! I’m Napoleon-Christos Oikonomou. 😎"}
-			</Text>
-			<Box marginBottom={1}>
+		<>
+			<Box flexDirection="column" marginBottom={1}>
+				<Text bold color="#008B8B">
+					{"Hello! I’m Napoleon-Christos Oikonomou. 😎"}
+				</Text>
 				<Text>
-					{`I’m an Electrical & Computer Engineer and Software Developer, currently working\nas a Lead Software Engineer at ${terminalLink(chalk.hex("#112e41")("TechNative"), "https://technative.gr/")}.`}
+					{"I’m an Electrical & Computer Engineer and Software Developer, currently working\nas a Lead Software Engineer at "}
+					<Text color="#112e41">
+						{terminalLink("TechNative", "https://technative.gr")}
+					</Text>
+					<Text>
+						{"."}
+					</Text>
 				</Text>
 			</Box>
 			<Select
@@ -36,7 +41,7 @@ const Index = () => {
 					}
 				}}
 			/>
-		</Box>
+		</>
 	);
 };
 

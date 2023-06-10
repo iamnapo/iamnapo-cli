@@ -27,7 +27,7 @@ jobs:
           scope: "@iamnapo"
 
       - name: 🏗 Run replace-in-file
-        run: npx replace-in-file \"iamnapo\" \"@iamnapo\/iamnapo\" package.json
+        run: npx replace-in-file "iamnapo" "@iamnapo/iamnapo" package.json
 
       - name: 🚀 Release
         run: npm publish
