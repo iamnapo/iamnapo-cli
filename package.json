@@ -38,19 +38,19 @@
 		"ignorePatterns": "dist"
 	},
 	"dependencies": {
-		"@inkjs/ui": "^1.0.0",
-		"ink": "^4.4.1",
-		"open": "^10.0.4",
+		"@inkjs/ui": "^2.0.0",
+		"ink": "^5.0.0",
+		"open": "^10.1.0",
 		"pastel": "^2.0.2",
-		"react": "^18.2.0",
+		"react": "^18.3.1",
 		"terminal-link": "^3.0.0"
 	},
 	"devDependencies": {
 		"@iamnapo/tsconfig": "^5.0.0",
-		"@types/react": "^18.2.60",
-		"eslint": "^8.57.0",
-		"eslint-config-iamnapo": "^35.0.0",
-		"typescript": "^5.3.3"
+		"@types/react": "^18.3.3",
+		"eslint": "^9.3.0",
+		"eslint-config-iamnapo": "^36.0.0",
+		"typescript": "^5.4.5"
 	},
 	"engines": {
 		"node": ">=20"

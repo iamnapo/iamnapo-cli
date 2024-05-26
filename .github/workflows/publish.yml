@@ -7,6 +7,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
@@ -14,22 +17,27 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: 📥 Download deps
         run: npm i
 
+      - name: 🚀 Release to npm
+        run: npm publish --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           registry-url: "https://npm.pkg.github.com"
           scope: "@iamnapo"
 
       - name: 🏗 Run replace-in-file
         run: npx replace-in-file "iamnapo" "@iamnapo/iamnapo" package.json
 
-      - name: 🚀 Release
+      - name: 🚀 Release to GitHub
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
