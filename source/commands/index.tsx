@@ -9,7 +9,7 @@ const Index = () => {
 		{ label: "Website", value: "https://iamnapo.me" },
 		{ label: "GitHub", value: "https://iamnapo.me/gh" },
 		{ label: "LinkedIn", value: "https://iamnapo.me/li" },
-		{ label: "Contact", value: "mailto:hi@iamnapo.me" },
+		{ label: "Napo Should Contact Me", value: "mailto:b**t@c**o.h***th" },
 		{ label: "Twitter", value: "https://iamnapo.me/tw" },
 		{ label: "Quit", value: "quit" },
 	];
