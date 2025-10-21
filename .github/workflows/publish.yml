@@ -15,31 +15,32 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
 
+      - name: ⎔ Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 25
           registry-url: "https://registry.npmjs.org"
 
       - name: 📥 Download deps
-        run: npm i
+        run: pnpm i
 
       - name: 🚀 Release to npm
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm publish --no-git-checks
 
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 25
           registry-url: "https://npm.pkg.github.com"
           scope: "@iamnapo"
 
       - name: 🏗 Run replace-in-file
-        run: npx replace-in-file "iamnapo" "@iamnapo/iamnapo" package.json
+        run: pnpx replace-in-file "iamnapo" "@iamnapo/iamnapo" package.json
 
       - name: 🚀 Release to GitHub
-        run: npm publish
+        run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

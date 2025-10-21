@@ -21,7 +21,10 @@ const Index = () => {
 					{"Hello! I’m Napoleon-Christos Oikonomou. 😎"}
 				</Text>
 				<Text>
-					{`I’m an Electrical & Computer Engineer and Software Developer, currently working\nas a Senior Software Engineer at ${terminalLink("Persado", "https://persado.com")}.`}
+					{`I’m an Electrical & Computer Engineer and Software Developer, currently working\nas a Senior Software Engineer at ${terminalLink(
+						"Persado",
+						"https://persado.com",
+					)}.`}
 				</Text>
 			</Box>
 			<Select
